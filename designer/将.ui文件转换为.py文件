@@ -1,0 +1,32 @@
+将.ui文件转换为.py文件
+
+方法一:
+python -m PyQt5.uic.pyuic demo.ui -o demo.py
+
+方法二:
+pyuic5 demo.ui -o demo.py
+
+方法三:
+扩展工具
+pyuic
+程序:E:\Anaconda\python.exe
+实参:-m PyQt5.uic.pyuic $FileName$ -o $FileNameWithoutExtension$.py
+工作目录:$FileDir$
+
+右键xxx.ui-->External Tools-->pyuic
+
+
+调用:
+import sys
+import xxx
+
+from  PyQt5.QtWidgets import QApplication,QMainWindow
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    mainWindow = QMainWindow()
+    ui = xxx.Ui_MainWindow()
+    ui.setupUi(mainWindow)
+    mainWindow.show()
+    sys.exit(app.exec_())
+
