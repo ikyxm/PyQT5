@@ -12,11 +12,11 @@ class Example(QWidget):
 
     def initUI(self):
         # 设置窗口的位置和大小
-        self.setGeometry(300, 300, 300, 220)
+        self.setGeometry(700, 350, 500, 300)
         # 设置窗口的标题
-        self.setWindowTitle('Icon')
-        # 设置窗口的图标，引用当前目录下的web.png图片
-        self.setWindowIcon(QIcon('web.png'))
+        self.setWindowTitle('图标')
+        # 设置窗口的图标，引用当前目录下的web.svg图片
+        self.setWindowIcon(QIcon('web.svg'))
 
         # 显示窗口
         self.show()
